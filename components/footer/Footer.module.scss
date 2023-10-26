@@ -1,0 +1,183 @@
+.footer {
+    max-width: 1900px;
+    margin: auto;
+    margin-left: 2px;
+    background-color: #f5f5f5;
+    padding: 20px;
+
+    &_wrapper {
+        margin: auto;
+
+        .form {
+            display: flex;
+            gap: 50px;
+
+            form {
+                display: flex;
+                gap: 20px;
+
+                input {
+                    border: 1px solid #999;
+                    padding: 6px;
+                    background-color: #fff;
+                    border-radius: 7px;
+                    width: 300px;
+                    height: 30px;
+                }
+
+                button {
+                    background-color: #d60000;
+                    color: #fff;
+                    text-align: center;
+                    padding: 6px;
+                    border-radius: 7px;
+                }
+            }
+        }
+
+        .links {
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(4, 1fr);
+
+            ul {
+                width: 240px;
+                h3 {
+                    font-weight: 600;
+                    margin: 10px 0;
+                    font-size: 16px;
+                }
+
+                li {
+                    font-size: 15px;
+                    margin-top: 5px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .letsFriend {
+            h3 {
+                font-weight: 600;
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            &_items {
+                display: flex;
+                gap: 20px;
+                padding: 30px;
+
+                div {
+                    padding: 6px;
+                    border-radius: 10px;
+
+                    svg {
+                        width: 40px;
+
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.svg {
+    width: 20px;
+}
+.df {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    align-items: center;
+    h2 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer {
+        &_wrapper {
+            .form {
+                display: flex;
+                flex-direction: column;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        width: 400px;
+                    }
+                }
+            }
+            .links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        &_wrapper {
+            .links {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                ul {
+                    width: 100px;
+                    h3 {
+                        font-weight: 600;
+                        margin: 10px 0;
+                        font-size: 16px;
+                    }
+
+                    li {
+                        font-size: 15px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        &_wrapper {
+            .form {
+                display: flex;
+                flex-direction: column;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        width: 300px;
+                    }
+                }
+            }
+            .links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

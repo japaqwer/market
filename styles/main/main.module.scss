@@ -1,0 +1,18 @@
+.main_wrapper {
+    @apply flex gap-4;
+    &__left {
+        @apply hidden md:block  xl:w-[300px] xl:h-auto border;
+    }
+    &__right {
+        @apply flex flex-col gap-[20px] m-auto;
+        .popular {
+            @apply flex gap-5  max-w-[80%] m-auto md:max-w-[70%] lg:max-w-[100%] max-h-[40%] md:max-h-[70%] lg:max-h-[100%];
+            div {
+                @apply w-[100%]  border h-[130px] md:h-[160px] lg:h-[200px] rounded-[8px];
+                img {
+                    @apply w-full h-full;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+// .ProdWrapper {
+//   @apply flex justify-between ;
+//   .cards_wrapper {
+//     @apply grid grid-cols-3 gap-[15px];
+//   }
+// }
+
+.ProdWrapper {
+    display: flex;
+    gap: 15px;
+    .cards_wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .ProdWrapper {
+        flex-direction: column;
+        .cards_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ProdWrapper {
+        .cards_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+    }
+}

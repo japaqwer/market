@@ -1,0 +1,308 @@
+// .header
+.header {
+    padding: 0 20px;
+    margin: auto;
+
+    &_wrapper {
+        width: 100%;
+        margin: auto;
+        top: 7.5%;
+
+        &_top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+
+            &__images {
+                display: flex;
+                gap: 40px;
+                // width: 30%;
+
+                .logo {
+                    width: 150px;
+
+                    img {
+                        width: 200px;
+                        height: 76px;
+                    }
+                }
+            }
+            &__text {
+                width: 55%;
+                padding-left: 140px;
+                display: none;
+                // display: none;
+
+                p {
+                    font-size: 22px;
+                }
+            }
+
+            &__phone {
+                width: 55%;
+                padding-left: 140px;
+                // display: none;
+
+                p {
+                    font-size: 12px;
+                    width: 300px;
+
+                    a {
+                        color: #d60000;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            &__auth {
+                // width: 15%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                a {
+                    color: #000;
+                    font-size: 14px;
+                    font-weight: 600;
+                    // padding-left: 10px;
+                    padding-right: 10px;
+
+                    &:first-of-type {
+                        border-right: 2px solid #000;
+                    }
+                }
+            }
+        }
+
+        &_btm {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 12px;
+            padding-left: 32px;
+            padding-right: 32px;
+            gap: 15px;
+            justify-content: space-between;
+            position: relative;
+
+            &__catalog {
+                position: relative;
+
+                button {
+                    border-radius: 6px 6px 0 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    width: 50px;
+                }
+            }
+
+            &__tools {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                font-weight: 400;
+
+                // span {
+                //     display: none;
+                // }
+            }
+
+            &__search {
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 500px;
+                    border: 1px solid #666;
+                    border-radius: 6px 0 0 6px;
+                    padding: 8px 16px;
+                }
+
+                button {
+                    padding: 13px 12px;
+                    background: #666;
+                    color: #fff;
+                    border-radius: 0 6px 6px 0;
+                }
+            }
+        }
+    }
+}
+
+// .catalog_btn
+.catalog_btn {
+    width: 200px;
+    background: #d60000;
+    span{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+// .catalog_wrapper
+.catalog_wrapper {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    width: 200px;
+
+    .categories {
+        border: 1px solid #000;
+        background: #fff;
+        padding: 15px;
+
+        p {
+            padding: 8px;
+        }
+    }
+}
+
+// .SubCategories
+.SubCategories {
+    position: relative;
+}
+
+// .SubCategory_item
+.SubCategory_item {
+    width: 60vw;
+    background: white;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border: 1px solid #000;
+}
+
+// .product_input
+.product_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// .productList
+.productList {
+    width: 580px;
+    padding: 8px;
+    border: 1px solid #666;
+    margin-top: 13%;
+    margin-left: 50px;
+    background: white;
+    position: absolute;
+    z-index: 10;
+    border-radius: 6px;
+    border-color: #fff;
+
+    .product {
+        display: flex;
+        gap: 6px;
+        padding: 1px 4px;
+        border-radius: 6px;
+
+        img {
+            width: 70px;
+            height: 90px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 6px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header {
+        &_wrapper {
+            &_btm {
+                &__tools {
+                    span {
+                        display: none;
+                    }
+                }
+                &__search {
+                    input {
+                        width: 300px;
+                    }
+                }
+            }
+            &_top {
+                &__auth {
+                    margin-right: 40px;
+                }
+                &__phone {
+                    display: none;
+                }
+            }
+        }
+    }
+    .catalog_btn {
+        width: 40px;
+        span {
+            display: none;
+        }
+
+        // button {
+        //     display: none;
+        // }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        &_wrapper {
+            gap: 30px;
+            &_btm {
+                &__tools {
+                    span {
+                        display: none;
+                    }
+                }
+                &__search {
+                    input {
+                        width: 100px;
+                    }
+                }
+            }
+            &_top {
+                &__auth {
+                    margin-right: 40px;
+                    &__svg {
+                        display: none;
+                    }
+                }
+                &__phone {
+                    display: none;
+                }
+            }
+        }
+    }
+    .catalog_btn {
+        width: 40px;
+        span {
+            display: none;
+        }
+
+        // button {
+        //     display: none;
+        // }
+    }
+    .productList {
+        width: 320px;
+    }
+}

@@ -1,0 +1,27 @@
+.cart{
+    @apply w-[300px] hover:border-slate-400 border m-8 rounded-lg   ; 
+    &_heart{
+        @apply flex mt-4 mr-4 ; 
+        &__svg{
+            @apply ml-auto w-10 decoration-white ;
+        }
+    }
+    &_image{
+        @apply w-[204px] m-8;
+        img{
+            @aplly w-[204px];
+        }
+    }
+    &_name{
+        @apply text-sm m-8 ;
+    }
+    &_price{
+        @apply m-8 flex justify-between;
+    }
+    &_icons{
+        @apply   py-[9px] px-[6px] w-9 h-9 rounded-full hover:bg-red-700 bg-red-600;
+        &__svg{
+            @apply  w-6;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.signup {
+    &__wrapper {
+        // min-height: 70vh;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // background-color: white;
+
+        &__content {
+            // margin: 0 auto;
+            // max-width: 320px;
+            // padding: 6px 3px;
+            display: flex;
+            justify-content: center;
+            // flex-direction: column;
+            // gap: 8px;
+
+            &__one {
+                border-radius: 15px;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                padding: 10px 30px;
+                width: 650px;
+
+                &__text {
+                    text-align: center;
+                    h1 {
+                        font-size: 24px;
+                        color: black;
+                    }
+                    p {
+                        font-size: 16px;
+                        color: #666;
+                        text-align: center;
+                        margin-top: 3px;
+                    }
+                }
+                &__input {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 50px 0;
+                    gap: 15px;
+
+                    input {
+                        border-radius: 15px;
+                        margin-top: 8px;
+                        height: 40px;
+                        padding: 30px;
+                    }
+                }
+                &__button {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 8px;
+                    button {
+                        width: 150px;
+                        padding: 6px 12px;
+                        background-color: #ff0000;
+                        color: white;
+                        display: flex;
+                        border-radius: 6px;
+                    }
+                    &__arrow {
+                        width: 30px;
+                        margin-top: 5px;
+                    }
+                    &__text {
+                        font-size: 16px;
+                        color: black;
+                        padding: 6px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+}

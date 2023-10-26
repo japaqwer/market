@@ -1,0 +1,6 @@
+.categories {
+    @apply px-[30px] py-[20px] relative;
+    .subcategories {
+        @apply absolute px-[20px] left-full top-[-1px] z-[100] bg-white w-[60vw] h-[650px] border;
+    }
+}

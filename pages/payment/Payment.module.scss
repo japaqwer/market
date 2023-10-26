@@ -1,0 +1,37 @@
+.block{
+    h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    &__b1{
+        display: flex;
+        justify-content: space-between;
+        
+        &__text{
+            width: 60%;
+            h2{
+                font-size: 24px;
+                font-weight: 600;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.image{
+    width: 40%;
+}
+@media screen and (max-width: 768px) {
+    .block{
+        &__b1{
+            img{
+                display: none;
+            }
+            &__text{
+                width: 100%;
+            }
+        }
+    }
+}
