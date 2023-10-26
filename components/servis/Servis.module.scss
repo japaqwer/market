@@ -1,0 +1,46 @@
+.servis{
+    &__text{
+        h2{
+            font-size: 28px;
+            font-weight: 800;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    &__box{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        &__block{
+            padding: 20px;
+            display: block;
+            // border: 1px solid #666;
+            box-shadow: 0 1px 4px #bfbfbf;
+            border-radius: 10px;
+            p{
+                color: #3caa3c;
+                font-weight: 700;
+                font-size: 26px;
+            }
+            span{
+                margin-top: 10px;
+              
+                width: 60%;
+                color: #666;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .servis{
+        &__box{
+            flex-direction: column;
+        }
+    }
+    
+}

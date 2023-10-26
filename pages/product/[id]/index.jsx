@@ -10,6 +10,7 @@ import ProdCard from '../../../components/ProdCard/ProdCard';
 import CategoryCard from '../../../components/CategoryCard/CategoryCard';
 import { ToastContainer, toast } from 'react-toastify';
 import ProdSlider from '../../../components/ProdSlider/ProdSlider';
+import Servis from '../../../components/servis';
 const defaultImageUrl = '/logo-red.png'; // Provide the path to your default image
 
 const Post = () => {
@@ -196,14 +197,13 @@ const Post = () => {
                 {isNextModalOpen && (
                     <div className={styles.modal}>
                         <div className={styles.modal__wrapper}>
-                            <button className={styles.modal__wrapper__button} onClick={closeModal}>
+                           <div> <button className={styles.modal__wrapper__button} onClick={closeModal}>
                                 X
                             </button>
-
-                            
                             <p>{product?.name}</p>
-                        <h2>{product?.price}р.</h2>
-                            <button
+                            <h2>{product?.price}р.</h2></div>
+                            <div>
+                                <button
                                 className={styles.modal__wrapper__button}
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -212,6 +212,7 @@ const Post = () => {
                                 }}>
                                 Отправить
                             </button>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -235,6 +236,7 @@ const Post = () => {
                 <ProdSlider route={subcategories[0]} />
             </div>
             </div>
+            <Servis/>
         </main>
     );
 };
