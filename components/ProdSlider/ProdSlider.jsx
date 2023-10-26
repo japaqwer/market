@@ -49,14 +49,14 @@ const ProdSlider = ({ route }) => {
             }
         };
         getSlides();
-        console.log(slides, 'slides', windowWidth);
     }, [windowWidth]);
 
     return (
         <div>
+            <ToastContainer />
             <Swiper
                 rewind={true}
-                spaceBetween={300}
+                spaceBetween={45}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
@@ -66,15 +66,14 @@ const ProdSlider = ({ route }) => {
                 className="my-slider"
                 slidesPerView={slides}
                 breakpoints={breakpoints}>
-                <ToastContainer />
                 {route?.products?.length > 0 ? (
                     route?.products?.map((item, index) => (
-                        <SwiperSlide key={item.id}>
+                        <SwiperSlide key={item.id} className={styles.swiperProdSlide}>
                             <SliderCard
                                 // href={`/category/${route.parent_category.name}/${route.name}/${item.id}`}
                                 href={`/product/${item.id}`}
                                 key={item.id}
-                                image={item.image_url}
+                                image={item.img_url}
                                 name={item.name}
                                 price={item.price}
                                 productId={item.id}

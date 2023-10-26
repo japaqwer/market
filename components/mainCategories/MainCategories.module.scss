@@ -1,6 +1,12 @@
 .categories {
-    @apply px-[30px] py-[20px] relative;
+    @apply px-[10px] py-[10px] relative text-start flex flex-col gap-[20px] min-w-[300px] border-[none] max-h-[110vh] h-full overflow-y-scroll;
     .subcategories {
         @apply absolute px-[20px] left-full top-[-1px] z-[100] bg-white w-[60vw] h-[650px] border;
+    }
+}
+.linkCategory{ 
+    @apply border px-[17px] py-[7px] rounded-[8px] text-gray-700;
+    &:hover {
+        @apply border px-[17px] py-[7px] rounded-[8px] bg-gray-50 text-black;
     }
 }

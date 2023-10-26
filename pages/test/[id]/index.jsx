@@ -12,9 +12,6 @@ import CategoryCard from '../../../components/CategoryCard/CategoryCard';
 const Post = () => {
     const router = useRouter();
     const [arrData, setArrData] = useState();
-    console.log('====================================');
-    console.log(router.query.id);
-    console.log('====================================');
 
     const fetchCategories = async (id) => {
         const url = `${API_URL}/api/v1/category/categories/${id}/`;
@@ -32,7 +29,6 @@ const Post = () => {
         }
     }, [router.query.id]);
 
-    console.log(arrData)
     if (arrData?.products===true){
         return (
             <main>

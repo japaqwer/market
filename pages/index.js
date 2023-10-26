@@ -33,7 +33,6 @@ export default function Home() {
     const routesArr = useSelector((state) => state.routes.categoryRotes);
 
     useEffect(() => {
-        console.log(routesArr, 'arrroutes');
         async function fetchData() {
             try {
                 const response = await fetch('http://51.20.95.11:8000/api/v1/product/');
@@ -58,7 +57,6 @@ export default function Home() {
             setSubcategories(subcategories)
         }
         getFilteredProds()
-        console.log(subcategories, "subs");
     }, [routesArr]);
     return (
         <main>

@@ -46,7 +46,6 @@ const Signin = () => {
                 sessionStorage.setItem('access_token', accessToken);
                 sessionStorage.setItem('refresh_token', refreshToken);
                 setAccessToken(accessToken);
-                console.log(res.data);
                 dispath(setUser(res.data));
                 sessionStorage.setItem('user', JSON.stringify(res.data));
                 router.push('/');

@@ -32,7 +32,6 @@ const CategoryRoutes = () => {
         <div>
             {categoryRoutes?.length > 0 ? (
                 categoryRoutes.map((route) => {
-                    console.log(route.name, 'routes');
                     return <div key={route.id}>{route.name}</div>;
                 })
             ) : (

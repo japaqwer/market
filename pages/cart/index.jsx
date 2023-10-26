@@ -48,10 +48,8 @@ const Page = () => {
             })
             .then((response) => {
                 if (response.status === 200) {
-                    console.log(response);
                     const data = response.data;
                     setCartArr(data);
-                    console.log(data, 'cart again');
                     setAuthorize(true);
                 }
             })
@@ -71,7 +69,6 @@ const Page = () => {
                 },
             });
             if (response.status === 204) {
-                console.log(`Deleted ${id}`);
                 toast.success('вы успешно удалили товар из корзины');
                 getAllCart(token);
             }

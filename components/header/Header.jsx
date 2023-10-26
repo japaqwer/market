@@ -22,6 +22,8 @@ const Header = () => {
     const [searchResult, setSearchResult] = useState('');
     const [searchId, setSearchId] = useState('');
     const [userHead, setUserHead] = useState(null);
+    
+    const [adminInfo, setAdminInfo] = useState(null);
 
     const dispath = useDispatch();
 
@@ -48,7 +50,6 @@ const Header = () => {
                     headers: { Authorization: 'Bearer ' + sessionStorage.getItem('access_token') },
                 });
                 setProducts(response.data);
-                console.log(response.data);
                 if (response.data.length === 0) {
                     // router.push('/');
                 }
@@ -57,6 +58,21 @@ const Header = () => {
             }
         };
         fetchData();
+        const getNumberHeader = async () => {
+            try {
+                const response = await axios.get(`https://sel-market-back.com/api/v1/payment/info-card/`, {
+                    headers: { Authorization: 'Bearer ' + sessionStorage.getItem('access_token') },
+                });
+                setAdminInfo(response.data)
+                // console.log(response.data);
+                if (response.data.length === 0) {
+                    // router.push('/');
+                }
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        };
+        getNumberHeader();
     }, []);
 
     useEffect(() => {
@@ -117,13 +133,11 @@ const Header = () => {
                             <br /> стройки и ремонта
                         </p>
                     </div>
-
+                    {/* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */}
                     <div className={styles.header_wrapper_top__phone}>
                         <p>
-                            <Link href="#">+7 (495) 647-10-00</Link>
-                        </p>
-                        <p>
-                            <Link href="#">8 800 550-37-70</Link>
+                            {/* <a href={`tel:+${adminInfo['номер']}`}>{adminInfo['номер']}</a> */}
+                            {/* <a href="/">{adminInfo['номер']}</a> */}
                         </p>
                         <p>Звонок бесплатный 05:00 – 22:00</p>
                     </div>

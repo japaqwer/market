@@ -42,9 +42,6 @@ const Test = () => {
         setResultArr(filteredArr);
         fetchCategories(parans?.id)
     }, [arr, inputValue1, inputValue2]);
-    console.log('====================================');
-    console.log(456);
-    console.log('====================================');
     if (dataArr?.products){
         return (
             <main>

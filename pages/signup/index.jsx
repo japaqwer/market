@@ -38,7 +38,6 @@ const Signup = () => {
             .then((res) => {
                 const accessToken = res.data['access'];
                 sessionStorage.setItem('access_token', accessToken);
-                console.log(res, 'res');
                 dispatch(setUser(res.data));
                 sessionStorage.setItem('user', JSON.stringify(res.data));
                 router.push('/');

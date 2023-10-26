@@ -19,13 +19,10 @@ const ProdWrapper = ({ arr }) => {
             .get(url)
             .then((res) => {
                 setDatatArr(res.data);
-                console.log(res)
             })
             .catch((err) => {
             });
     };
-    
-    console.log(dataArr)
 
     const checkArr = (arrToCheck) => {
         if (inputValue1 !== '' && inputValue2 !== '') {
@@ -42,7 +39,6 @@ const ProdWrapper = ({ arr }) => {
         setResultArr(filteredArr);
         fetchCategories(arr?.id)
     }, [arr, inputValue1, inputValue2]);
-    console.log(dataArr)
     if (dataArr?.products){
         return (
             <main>

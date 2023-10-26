@@ -16,7 +16,7 @@ const MainCategories = ({routesArr}) => {
         onMouseLeave={() => setHovered(false)}>
         {
             routesArr.map(((item,index) => 
-                <Link key={item.id} className='flex gap-3 items-center' href={`/test/${item.id}/`} onMouseEnter={() => setCurrentItem(item)}>
+                <Link key={item.id} className={styles.linkCategory} href={`/test/${item.id}/`} onMouseEnter={() => setCurrentItem(item)}>
                     <img width={20} src={item.icon} alt="" />
                     {item.name}
                 </Link>

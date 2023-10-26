@@ -8,11 +8,10 @@ import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 
 
-function ProductCard({ name, price, image_url, productId, accessToken, href, elem }) {
+function ProductCard({ name, price, image, productId, accessToken, href, elem }) {
     const [isFavorite, setIsFavorite] = useState(false);
     const [cartProductId, setCartProductId] = useState(null);
     const [favoritesArr, setFavouritesArr] = useState([])
-
 
     const favArr = JSON.parse(localStorage.getItem('favourites')) || []; 
     const toggleFavorite = () => {
@@ -52,22 +51,27 @@ function ProductCard({ name, price, image_url, productId, accessToken, href, ele
 
     const handleAddFav = (item) => {     
         if (favArr.some(favItem => favItem.id === item.id)) {
-            console.log('уже есть в избранном');
             return
         }
         favArr.push(item);
         localStorage.setItem('favourites', JSON.stringify(favArr));
-        console.log(favArr, 'favs');
         setFavouritesArr(favArr)
       };
     const delFav = (id) => {
         const favArr = JSON.parse(localStorage.getItem('favourites')) || [];    
         const uptFavArr = favArr.filter(item => item.id != id)
         localStorage.setItem('favourites', JSON.stringify(uptFavArr))
-        console.log(uptFavArr, 'deleteed');
-
     }
 
+    const fullImageUrl = (image) => {
+        if (image.startsWith('https')) {
+            return image
+        } else {
+            return 'https://max.kg/images/xempty-photo.png.pagespeed.ic.n6GY_KSzTq.png'
+           
+        }
+    }
+    const resImage = fullImageUrl(image)
     return (
         <div className={styles.card}>
             <div className={styles.card_heart} onClick={toggleFavorite}>
@@ -79,7 +83,7 @@ function ProductCard({ name, price, image_url, productId, accessToken, href, ele
             </div>
             <div className={styles.card_image}>
                 {/* <img src={result} alt={name} /> */}
-                <img src={image_url} alt={name} />
+                <img src={resImage} alt={name} />
             </div>
             <div className={styles.card_name}>
                 <span>{name}</span>

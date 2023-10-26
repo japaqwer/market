@@ -11,7 +11,6 @@ const MainSubCategories = ({item}) => {
         .get(url)
         .then((res) => {
             setDatatArr(res.data);
-            console.log(res)
         })
         .catch((err) => {
         });

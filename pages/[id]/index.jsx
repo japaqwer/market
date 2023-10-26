@@ -28,7 +28,6 @@ const Page = ({id, name} ) => {
                 );
                 const getProductSubs = findSubCategory?.products?.find((elem) => elem.id == prodId);
                 setProduct(getProductSubs);
-                console.log(setProduct);
             } catch (error) {
                 console.error(error);
             }
@@ -64,8 +63,6 @@ const Page = ({id, name} ) => {
             progress: undefined,
             theme: 'light',
         });
-
-    console.log(product, 'loooooooooooool');
     const checkImage = (img) => {
         if (img?.slice(0, 4) == 'http') {
             return img;
