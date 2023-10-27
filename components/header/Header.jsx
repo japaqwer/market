@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { FaUser, FaShoppingCart } from 'react-icons/fa';
 import { AiOutlinePercentage, AiFillHeart } from 'react-icons/ai';
@@ -68,6 +69,7 @@ const Header = () => {
                 if (response.data.length === 0) {
                     // router.push('/');
                 }
+               
             } catch (error) {
                 console.error('Error fetching products:', error);
             }

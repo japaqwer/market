@@ -71,11 +71,9 @@ const Footer = () => {
                     </ul>
                     <ul>
                         <h3>Сервис и поддержка</h3>
-                        <li>Сервисный центр ВсеИнструменты.ру</li>
-                        <li>Обратная связь</li>
-                        <li>Помощь по работе с сайтом</li>
-                        <li></li>
-                        <li>Работа у нас</li>
+                        <li><Link href="/onas">Сервисный центр ВсеИнструменты.ру</Link></li>
+                        <li><Link href="/onas">Обратная связь</Link></li>
+                        <li><Link href="/onas">Помощь по работе с сайтом</Link></li>
                     </ul>
                 </div>
                 {/* <div className={styles.letsFriend}>
