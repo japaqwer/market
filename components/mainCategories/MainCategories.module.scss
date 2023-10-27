@@ -1,4 +1,6 @@
+
 .categories {
+    // width: 100%;
     padding: 10px;
     padding-top: 10px;
     position: relative;
@@ -6,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-width: 350px;
+    max-width: 350px;
     border: none;
     max-height: 80vh;
     height: 100%;
@@ -48,3 +50,24 @@
     }
   }
   
+  @media screen and (max-width: 500px) {
+    .categories{
+      width: 250px;
+    }
+    .linkCategory{
+      width: 250px;
+      display: flex;
+      border: 17px;
+      padding: 7px;
+      border-radius: 8px;
+      color: #777;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    }
+  }

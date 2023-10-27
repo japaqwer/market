@@ -6,7 +6,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    min-width: 350px;
+    // min-width: 350px;
+    width: 100%;
     border: none;
     max-height: 80vh;
     height: 100%;
